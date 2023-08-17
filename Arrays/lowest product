@@ -1,0 +1,36 @@
+
+//1913
+import java.util.*;
+
+public class lowestproduct {
+    public static void main(String[] args) {
+        int n, i, j, count = 0;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        int arr[] = new int[n];
+        int mul[] = new int[(n * n) - n];
+        for (i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int idx = 0;
+
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
+                if (i != j) {
+                    mul[idx] = arr[i] * arr[j];
+                    idx++;
+                }
+            }
+        }
+        for (int k = 0; k < idx; k++) {
+            System.out.println(mul[k]);
+        }
+        Arrays.sort(mul);
+        for (i = 0; i < mul.length; i++) {
+            System.out.print(mul[i] + " ");
+        }
+        System.out.println();
+        System.out.println(mul[mul.length - 1] - mul[0]);
+
+    }
+}
