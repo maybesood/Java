@@ -1,0 +1,15 @@
+class Solution {
+    public int findNonMinOrMax(int[] nums) {
+        int count=0;
+        Arrays.sort(nums);
+        if(nums.length>3){
+            return nums[nums.length-2];
+        }
+        else if(nums.length==3){
+            return nums[nums.length-2];
+        }
+        else{
+            return -1;
+        }
+    }   
+}
