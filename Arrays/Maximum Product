@@ -1,0 +1,22 @@
+//1464
+
+import java.util.*;
+public class maxproduct {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n,i,a,b;
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        for(i=0;i<n;i++){
+            System.out.println(arr[i]);
+        }
+        a=arr[n-1]-1;
+        b=arr[n-2]-1;
+        System.out.println(a*b);
+
+    }
+}
